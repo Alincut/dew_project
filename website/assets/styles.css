@@ -90,12 +90,15 @@ main article > section {
 }
 main article section h1 {
   font-size: var(--fz-large);
+  font-weight: 700;
 }
 main article section h2 {
   font-size: var(--fz-small);
+  font-weight: 700;
 }
 main article section p {
   font-size: var(--fz-x_small);
+  font-weight: 400;
 }
 main article > div {
   /* background-color: darkkhaki; */
@@ -112,10 +115,10 @@ main article > div .carousel {
   grid-template: auto / auto auto auto;
   gap: 16px;
 }
-main article > div .carousel > section {
+main article > div .carousel section {
   /* background-color: rosybrown; */
   display: grid;
-  grid-template: auto auto / 256px;
+  grid-template: auto auto auto / 256px;
   gap: 12px;
   justify-items: center;
   padding-bottom: 48px;
@@ -123,66 +126,34 @@ main article > div .carousel > section {
 .carousel section h2 {
   color: var(--color-dark);
   font-size: var(--fz-small);
+  font-weight: 700;
 }
-.carousel section > div {
-  display: flex;
-  flex-direction: column;
+.carousel section figure {
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 256px;
   border-radius: 8px;
   box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
-.carousel section > div figure {
-  position: relative;
-  width: 100%;
-  height: 256px;
-  overflow: hidden;
-}
-.carousel section > div figure img {
+.carousel section figure img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
 }
-.carousel section > div .order_bar {
-  background-color: var(--color-light);
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: fit-content;
-  padding: 8px;
-}
-.order_bar input {
+.carousel section input {
   background-color: var(--color-dark);
   color: var(--color-light);
-  padding: 8px;
+  padding: 12px;
+  width: 100%;
   height: fit-content;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
   font-size: var(--fz-x_small);
-}
-.order_bar > section {
-  display: grid;
-  grid-template: auto / auto auto;
-  gap: 16px;
-  align-items: center;
-}
-.order_bar > section h3 {
-  color: var(--color-dark);
-  font-size: var(--fz-x_small);
-}
-.order_bar > section a {
-  color: var(--color-dark);
-  display: flex;
-  width: fit-content;
-  height: fit-content;
-}
-.order_bar a svg {
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
+  font-weight: 700;
 }
 
 
@@ -190,9 +161,17 @@ main > section {
   background-color: var(--color-light);
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 12px;
 }
 main > section h2 {
   color: var(--color-dark);
+  margin-right: 12px;
   font-size: var(--fz-small);
+}
+main > section svg {
+  color: var(--color-dark);
+  width: 16px;
+  height: 16px;
+  transform: rotateZ(-90deg);
 }
