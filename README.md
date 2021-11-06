@@ -1,2 +1,2 @@
-# dew_project
-Proyecto del curso Desarrollo de Entornos Web
+# Proyecto del curso Desarrollo de Entornos Web
+Página web de un e-comerce asociado a la panadería.
