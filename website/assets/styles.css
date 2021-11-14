@@ -4,6 +4,7 @@
   --color-misty_light: #C4C4C4;
   --color-soft_dark: #65656C;
   --color-dark: #22262C;
+  --color-brand_1: #fdd700;
   --shadow-soft: 0px 4px 8px rgba(0, 0, 0, 0.20);
   --fz-x_large: 3.4rem;
   --fz-large: 2.8rem;
@@ -29,6 +30,7 @@ body {
   height: 100vh;
 }
 .container {
+  position: relative;
   background-color: var(--color-misty_light);
   display: flex;
   flex-direction: column;
@@ -38,6 +40,9 @@ body {
 
 header {
   z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: var(--color-white);
   display: flex;
   justify-content: space-between;
@@ -70,6 +75,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  margin-top: 48px;
 }
 main article {
   /* background-color: skyblue; */
@@ -77,6 +83,10 @@ main article {
   grid-template: auto auto / 1fr;
   gap: 48px;
   padding-top: 48px;
+}
+main article.mapa {
+  gap: 0px;
+  padding: 48px 0;
 }
 main article > section {
   /* background-color: seagreen; */
@@ -109,11 +119,20 @@ main article > div {
 ::-webkit-scrollbar {
   display: none;
 }
+main article.mapa > div {
+  display: flex;
+  padding: 48px 32px 0;
+}
+main article.mapa input {
+  justify-self: center;
+  width: 256px;
+  padding: 12px;
+}
 main article > div .carousel {
   /* background-color: fuchsia; */
   display: grid;
   grid-template: auto / auto auto auto;
-  gap: 16px;
+  gap: 0px 16px;
 }
 main article > div .carousel section {
   /* background-color: rosybrown; */
@@ -121,8 +140,11 @@ main article > div .carousel section {
   grid-template: auto auto auto / 256px;
   gap: 12px;
   justify-items: center;
+}
+.carousel .offer {
   padding-bottom: 48px;
 }
+
 .carousel section h2 {
   color: var(--color-dark);
   font-size: var(--fz-small);
@@ -143,7 +165,7 @@ main article > div .carousel section {
   transform: translate(-50%, -50%);
   width: 100%;
 }
-.carousel section input {
+.boton {
   background-color: var(--color-dark);
   color: var(--color-light);
   padding: 12px;
@@ -158,7 +180,7 @@ main article > div .carousel section {
 
 
 main > section {
-  background-color: var(--color-light);
+  background-color: var(--color-brand_1);
   display: flex;
   justify-content: center;
   align-items: center;
