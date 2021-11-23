@@ -15,7 +15,7 @@
     <div class="container">
       <header>
         <div class="left">
-          <a href="" class="menu">
+          <a href="" class="menu_icon">
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -38,7 +38,7 @@
               />
             </svg>
           </a>
-          <a href="">
+          <a href="./index.html">
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -89,9 +89,50 @@
           </a>
         </div>
       </header>
+
+      <section class="menu">
+        <h2>Menú</h2>
+        <ul>
+          <li>
+            <span>
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1C4.5 1 0 5.01328 0 8.26773C0 9.56969 1.01 10.625 2.66667 10.625V21.625C2.66667 22.3843 3.33833 23 4.16667 23H19.8333C20.6617 23 21.3333 22.3843 21.3333 21.625V10.625C22.99 10.625 24 9.56969 24 8.26773C24 5.01328 19.5 1 12 1Z" />
+              </svg>
+            </span>
+            Panadería
+            <i></i>
+          </li>
+          <li>
+            <span></span>
+            Pastelería
+            <i></i>
+          </li>
+          <li>
+            <span></span>
+            Cafetería
+            <i></i>
+          </li>
+          <li>
+            <span></span>
+            Heladería
+            <i></i>
+          </li>
+          <li>
+            <span></span>
+            Restaurante
+            <i></i>
+          </li>
+          <li>
+            <span></span>
+            Bodega
+            <i></i>
+          </li>
+        </ul>
+      </section>
+
       <main>
         <article>
-          <section>
+          <section class="message">
             <h1>Bienvenido a Breads</h1>
             <h2>Promociones todos los días</h2>
             <p>
@@ -99,7 +140,8 @@
               mejor precio.
             </p>
           </section>
-          <div>
+
+          <div class="carousel_container">
             <div class="carousel">
               <section class="offer">
                 <h2>¡Lunes 2x1 en panes!</h2>
@@ -109,8 +151,9 @@
                     alt="Oferta Lunes"
                   />
                 </figure>
-                <input type="button" value="PEDIR AHORA" class="boton" />
+                <input type="button" value="PEDIR AHORA" class="button" />
               </section>
+
               <section class="offer">
                 <h2>¡Jueves delivery gratis!</h2>
                 <figure>
@@ -119,8 +162,9 @@
                     alt="Oferta Jueves"
                   />
                 </figure>
-                <input type="button" value="PEDIR AHORA" class="boton" />
+                <input type="button" value="PEDIR AHORA" class="button" />
               </section>
+
               <section class="offer">
                 <h2>¡Domingo café gratis!</h2>
                 <figure>
@@ -129,25 +173,27 @@
                     alt="Oferta Domingo"
                   />
                 </figure>
-                <input type="button" value="PEDIR AHORA" class="boton" />
+                <input type="button" value="PEDIR AHORA" class="button" />
               </section>
             </div>
           </div>
+
+          <section class="see_more campus">
+            <h2>Conoce nuestras sedes</h2>
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.5743 13.7885L8.56045 21.7746C9.32618 22.5403 10.5677 22.5403 11.3334 21.7746C12.0991 21.0089 12.0991 19.7674 11.3334 19.0016L6.69454 14.3628L22.0392 14.3628C23.1221 14.3628 24 13.4849 24 12.402C24 11.3191 23.1221 10.4412 22.0392 10.4412L6.69454 10.4412L11.3334 5.80232C12.0991 5.03658 12.0991 3.79508 11.3334 3.02935C10.5677 2.26361 9.32618 2.26361 8.56045 3.02935L0.5743 11.0155C-0.191433 11.7812 -0.191433 13.0227 0.5743 13.7885Z"
+              />
+            </svg>
+          </section>
         </article>
-        <section>
-          <h2>Conoce nuestras sedes</h2>
-          <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.5743 13.7885L8.56045 21.7746C9.32618 22.5403 10.5677 22.5403 11.3334 21.7746C12.0991 21.0089 12.0991 19.7674 11.3334 19.0016L6.69454 14.3628L22.0392 14.3628C23.1221 14.3628 24 13.4849 24 12.402C24 11.3191 23.1221 10.4412 22.0392 10.4412L6.69454 10.4412L11.3334 5.80232C12.0991 5.03658 12.0991 3.79508 11.3334 3.02935C10.5677 2.26361 9.32618 2.26361 8.56045 3.02935L0.5743 11.0155C-0.191433 11.7812 -0.191433 13.0227 0.5743 13.7885Z"
-            />
-          </svg>
-        </section>
-        <article class="mapa">
-          <section>
+
+        <article>
+          <section class="message">
             <h1>Encuentra tu lugar</h1>
             <h2>Seguridad, confort y amabilidad</h2>
             <p>
@@ -155,53 +201,63 @@
               buen libro.
             </p>
           </section>
-          <div>
-            <div class="carousel mapa">
-              <section>
-                <h2>¡Lunes 2x1 en panes!</h2>
+
+          <div class="select_container">
+            <select name="sedes" id="sedes">
+              <option value="san_miguel">San Miguel</option>
+              <option value="jesus_maria">Jesús María</option>
+              <option value="bellavista">Bellavista</option>
+              <option value="magdalena">Magdalena</option>
+            </select>
+          </div>
+
+          <div class="carousel_container">
+            <div class="carousel">
+              <section class="map">
                 <figure>
                   <img
-                    src="https://images.pexels.com/photos/2067430/pexels-photo-2067430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="https://images.unsplash.com/photo-1601379342258-6f1e994c575c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNhZmUlMjBleHRlcmlvcnxlbnwwfDF8MHx8&auto=format&fit=crop&w=400&q=60"
                     alt="Oferta Lunes"
                   />
                 </figure>
               </section>
-              <section>
-                <h2>¡Jueves delivery gratis!</h2>
+              <section class="map">
                 <figure>
                   <img
-                    src="https://images.unsplash.com/photo-1611068562065-994ba66501ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                    src="https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                     alt="Oferta Jueves"
                   />
                 </figure>
               </section>
-              <section>
-                <h2>¡Domingo café gratis!</h2>
+              <section class="map">
                 <figure>
                   <img
-                    src="https://images.pexels.com/photos/890515/pexels-photo-890515.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="https://images.pexels.com/photos/1813466/pexels-photo-1813466.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
                     alt="Oferta Domingo"
                   />
                 </figure>
               </section>
             </div>
           </div>
-          <input type="button" value="VER MAPA" class="boton" />
+
+          <input type="button" value="VER EN EL MAPA" class="button map" />
+
+          <section class="see_more">
+            <h2>¿Quiénes somos?</h2>
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.5743 13.7885L8.56045 21.7746C9.32618 22.5403 10.5677 22.5403 11.3334 21.7746C12.0991 21.0089 12.0991 19.7674 11.3334 19.0016L6.69454 14.3628L22.0392 14.3628C23.1221 14.3628 24 13.4849 24 12.402C24 11.3191 23.1221 10.4412 22.0392 10.4412L6.69454 10.4412L11.3334 5.80232C12.0991 5.03658 12.0991 3.79508 11.3334 3.02935C10.5677 2.26361 9.32618 2.26361 8.56045 3.02935L0.5743 11.0155C-0.191433 11.7812 -0.191433 13.0227 0.5743 13.7885Z"
+              />
+            </svg>
+          </section>
         </article>
-        <section>
-          <h2>¿Quiénes somos?</h2>
-          <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.5743 13.7885L8.56045 21.7746C9.32618 22.5403 10.5677 22.5403 11.3334 21.7746C12.0991 21.0089 12.0991 19.7674 11.3334 19.0016L6.69454 14.3628L22.0392 14.3628C23.1221 14.3628 24 13.4849 24 12.402C24 11.3191 23.1221 10.4412 22.0392 10.4412L6.69454 10.4412L11.3334 5.80232C12.0991 5.03658 12.0991 3.79508 11.3334 3.02935C10.5677 2.26361 9.32618 2.26361 8.56045 3.02935L0.5743 11.0155C-0.191433 11.7812 -0.191433 13.0227 0.5743 13.7885Z"
-            />
-          </svg>
-        </section>
+
         <article>
-          <section>
+          <section class="message">
             <h1>Breads por siempre</h1>
             <h2>Desde 2018</h2>
             <p>
@@ -211,42 +267,85 @@
               tanto nos distingue.
             </p>
           </section>
-          <div>
+
+          <h2 class="thanks">¡Gracias por tu confianza!</h2>
+
+          <div class="carousel_container">
             <div class="carousel">
               <section>
-                <h2>¡Lunes 2x1 en panes!</h2>
                 <figure>
                   <img
-                    src="https://images.pexels.com/photos/2067430/pexels-photo-2067430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="https://images.unsplash.com/photo-1592332297790-c7c27c38ecb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
                     alt="Oferta Lunes"
                   />
                 </figure>
-                <input type="button" value="PEDIR AHORA" />
               </section>
+
               <section>
-                <h2>¡Jueves delivery gratis!</h2>
                 <figure>
                   <img
-                    src="https://images.unsplash.com/photo-1611068562065-994ba66501ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                    src="https://images.unsplash.com/photo-1604551979631-4282d4707ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                     alt="Oferta Jueves"
                   />
                 </figure>
-                <input type="button" value="PEDIR AHORA" />
               </section>
+
               <section>
-                <h2>¡Domingo café gratis!</h2>
                 <figure>
                   <img
-                    src="https://images.pexels.com/photos/890515/pexels-photo-890515.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    src="https://images.unsplash.com/photo-1536782896453-61d09f3aaf3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                     alt="Oferta Domingo"
                   />
                 </figure>
-                <input type="button" value="PEDIR AHORA" />
               </section>
             </div>
           </div>
         </article>
       </main>
+
+      <footer>
+        <div class="info">
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.0137 16.6172V12.8184H13.0352C13.9596 12.8509 14.4219 13.5052 14.4219 14.7812C14.4219 15.3672 14.2884 15.8197 14.0215 16.1387C13.7546 16.4577 13.3639 16.6172 12.8496 16.6172H11.0137Z" />
+                <path d="M12.5078 10.7285H11.0137V7.17383H12.5371C13.123 7.17383 13.5462 7.3138 13.8066 7.59375C14.0671 7.8737 14.1973 8.33594 14.1973 8.98047C14.1973 10.1458 13.6341 10.7285 12.5078 10.7285Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0C1.79086 0 0 1.79086 0 4V20C0 22.2091 1.79086 24 4 24H20C22.2091 24 24 22.2091 24 20V4C24 1.79086 22.2091 0 20 0H4ZM8.14258 4.78125V19H12.8496C14.2884 19 15.3854 18.6484 16.1406 17.9453C16.9023 17.2422 17.2832 16.2005 17.2832 14.8203C17.2832 14.013 17.1107 13.3359 16.7656 12.7891C16.4206 12.2357 15.929 11.8678 15.291 11.6855C15.8444 11.4447 16.2806 11.0638 16.5996 10.543C16.9186 10.0221 17.0781 9.40039 17.0781 8.67773C17.0781 7.40169 16.6908 6.4349 15.916 5.77734C15.1478 5.11328 14.0215 4.78125 12.5371 4.78125H8.14258Z" />
+              </svg>
+              BREADS
+            </li>
+            <li><a href="">¿Te gustaría trabajar con nosotros?</a></li>
+            <li><a href="">¿Deseas ser nuestro proveedor?</a></li>
+            <li><a href="">Notas legales</a></li>
+            <li><a href="">Contacto</a></li>
+          </ul>
+
+          <div>
+            <a href="https://www.instagram.com/?hl=es" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 7.76435C9.65676 7.76435 7.75721 9.66072 7.75721 12C7.75721 14.3393 9.65676 16.2356 12 16.2356C14.3432 16.2356 16.2428 14.3393 16.2428 12C16.2428 9.66072 14.3432 7.76435 12 7.76435Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.17177 0.376691C9.67319 -0.125564 14.3268 -0.125564 18.8282 0.376691C21.3065 0.653212 23.3055 2.60262 23.5963 5.08543C24.1346 9.67949 24.1346 14.3205 23.5963 18.9146C23.3055 21.3974 21.3065 23.3468 18.8282 23.6233C14.3268 24.1256 9.67319 24.1256 5.17177 23.6233C2.69347 23.3468 0.694542 21.3974 0.403666 18.9146C-0.134555 14.3205 -0.134555 9.67949 0.403666 5.08543C0.694542 2.60262 2.69347 0.653212 5.17177 0.376691ZM18.5273 4.18034C17.8063 4.18034 17.2219 4.76384 17.2219 5.48362C17.2219 6.2034 17.8063 6.7869 18.5273 6.7869C19.2483 6.7869 19.8328 6.2034 19.8328 5.48362C19.8328 4.76384 19.2483 4.18034 18.5273 4.18034ZM5.799 12C5.799 8.58105 8.57528 5.80944 12 5.80944C15.4247 5.80944 18.201 8.58105 18.201 12C18.201 15.419 15.4247 18.1906 12 18.1906C8.57528 18.1906 5.799 15.419 5.799 12Z" />
+              </svg>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.6329 0C13.0198 0 11.4727 0.640801 10.3321 1.78143C9.19148 2.92206 8.55068 4.46909 8.55068 6.08219V9.46849H5.29589C5.13247 9.46849 5 9.60097 5 9.76438V14.2356C5 14.399 5.13247 14.5315 5.29589 14.5315H8.55068V23.7041C8.55068 23.8675 8.68316 24 8.84658 24H13.3178C13.4812 24 13.6137 23.8675 13.6137 23.7041V14.5315H16.8973C17.0331 14.5315 17.1514 14.4391 17.1844 14.3074L18.3022 9.83615C18.3489 9.6494 18.2076 9.46849 18.0151 9.46849H13.6137V6.08219C13.6137 5.81189 13.7211 5.55266 13.9122 5.36152C14.1033 5.17039 14.3626 5.06301 14.6329 5.06301H18.0521C18.2155 5.06301 18.3479 4.93054 18.3479 4.76712V0.29589C18.3479 0.132475 18.2155 0 18.0521 0H14.6329Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <hr>
+
+        <div class="edoc">
+          <a href="">Consultar Documento Electrónico</a>
+        </div>
+        <hr>
+
+        <div class="copyright">
+          <p>©2021 Breads | Todos los derechos reservados</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
