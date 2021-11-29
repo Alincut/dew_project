@@ -1,13 +1,22 @@
 
-const menu_button = document.getElementById('menu_button_js');
-const menu = document.getElementById('menu_js');
-const main = document.getElementById('main_js');
+const nav = document.getElementById("nav_js");
+const header = document.getElementById("header_js");
+const container = document.getElementById("container_js");
+const icon_menu = document.getElementById("icon_menu_js");
 
-menu_button.addEventListener('click', (e) => {
-  menu.classList.add('show');
-  console.log(e);
-});
-
-main.addEventListener('click', (e) => {
-  if (e.target != menu) menu.classList.remove('show');;
+let menu_on = false;
+icon_menu.addEventListener('click', () => {
+  if (menu_on == false) {
+    nav.classList.add('move');
+    nav.style.zIndex = '2';
+    container.style.width = 'calc(100% - 320px)';
+    container.classList.add('move');
+    menu_on = true;
+  } else {
+    nav.style.zIndex = 'unset';
+    nav.classList.remove('move');
+    container.style.width = '100%';
+    container.classList.remove('move');
+    menu_on = false;
+  }
 })
