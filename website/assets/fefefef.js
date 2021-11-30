@@ -9,7 +9,7 @@ icon_menu.addEventListener('click', () => {
   if (menu_on == false) {
     nav.classList.add('move');
     nav.style.zIndex = '2';
-    container.style.width = 'calc(100% - 320px)';
+    container.style.width = 'calc(100% - 240px)';
     container.classList.add('move');
     menu_on = true;
   } else {

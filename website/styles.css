@@ -1,0 +1,107 @@
+:root {
+  /* Colores estándar */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-light: #f3f3f3;
+  --color-opaque_light: #d4d4d4;
+  --color-dark: #22262C;
+
+  --color-brand_1: #ffda60;
+  --color-brand_2: #ee081f;
+
+  /* Colores hover */
+  --color-brand_1_hover: #d19900;
+  --color-brand_2_hover: #a50b1a;
+
+  /* Colores active */
+  --color-brand_2_active: #74020d;
+
+  /* Colores transparentes */
+  --color-opacity_dark: #65656c36;
+  --color-opacity_black: #000000cb;
+
+  /* Bordes */
+  --border_radius-medium: 8px;
+  --border_radius-small: 4px;
+
+  /* Sombras */
+  --box_shadow-soft: 0px 0px 12px 8px rgba(0, 0, 0, 0.4);
+
+  /* Tamaños de fuente */
+  --fz-xxx_large: 5.4rem;
+  --fz-xx_large: 4rem;
+  --fz-x_large: 3.2rem;
+  --fz-large: 2.8rem;
+  --fz-medium: 2.4rem;
+  --fz-small: 2rem;
+  --fz-x_small: 1.8rem;
+  --fz-xx_small: 1.4rem;
+  --fz-xxx_small: 1.2rem;
+}
+
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+/* Estilos del body */
+body {
+  background-color: var(--color-black);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  /* overflow-y: hidden; */
+}
+.global_box {
+  position: relative;
+  background-color: var(--color-opaque_light);
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  height: inherit;
+  transition: all 200ms ease;
+  /* overflow-y: scroll; */
+  /* overflow: overlay; */
+}
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-brand_1);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  padding: 0 24px 0 16px;
+  box-shadow: var(--box_shadow-soft);
+}
+header > div {
+  background-color: green;
+}
+header > div a {
+  background-color: green;
+}
+header > div a svg {
+  width: 80px;
+  height: 40px;
+  background-color: yellow;
+  fill: red;
+}
+header > div a svg:hover {
+  fill: blue;
+}
