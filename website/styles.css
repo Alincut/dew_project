@@ -1,46 +1,42 @@
+/*~ ESTILOS GLOBALES */
 :root {
   /* Colores estándar */
   --color-white: #ffffff;
   --color-black: #000000;
-
-  --color-light: #f3f3f3;
-  --color-opaque_light: #d4d4d4;
-  --color-dark: #22262C;
-
   --color-brand_1: #ffda60;
-  --color-brand_2: #ee081f;
+  --color-brand_2: #22262C;
+  --color-brand_3: #f03043;
+  --color-brand_4: #f3f3f3;
+  --color-brand_5: #d8d8d8;
 
   /* Colores hover */
-  --color-brand_1_hover: #d19900;
-  --color-brand_2_hover: #a50b1a;
+  --color-hover-black: rgba(0, 0, 0, 0.12);
+  --color-hover-white: rgba(255, 255, 255, 0.12);
+  --color-hover-brand_3: #a50b1a;
 
   /* Colores active */
-  --color-brand_2_active: #74020d;
-
-  /* Colores transparentes */
-  --color-opacity_dark: #65656c36;
-  --color-opacity_black: #000000cb;
-
-  /* Bordes */
-  --border_radius-medium: 8px;
-  --border_radius-small: 4px;
+  --color-active-black: rgba(0, 0, 0, 0.24);
+  --color-active-white: rgba(255, 255, 255, 0.24);
+  --color-active-brand_1: rgb(255, 218, 96, 0.6);
+  --color-active-brand_2: rgb(34, 38, 44, 0.6);
+  --color-active-facebook: rgba(0, 89, 255, 0.3);
+  --color-active-instagram: rgba(253,29,29, 0.3);
 
   /* Sombras */
-  --box_shadow-soft: 0px 0px 12px 8px rgba(0, 0, 0, 0.4);
+  --box_shadow-hard: 0px -2px 8px 4px rgba(0, 0, 0, 0.3);
+  --box_shadow-soft: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 
   /* Tamaños de fuente */
-  --fz-xxx_large: 5.4rem;
-  --fz-xx_large: 4rem;
-  --fz-x_large: 3.2rem;
+  /* --fz-xxx_large: 5.4rem; */
+  /* --fz-xx_large: 4rem; */
+  /* --fz-x_large: 3.2rem; */
   --fz-large: 2.8rem;
   --fz-medium: 2.4rem;
   --fz-small: 2rem;
-  --fz-x_small: 1.8rem;
+  --fz-x_small: 1.6rem;
   --fz-xx_small: 1.4rem;
   --fz-xxx_small: 1.2rem;
 }
-
-/* Estilos globales */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -58,7 +54,9 @@ ul {
   list-style: none;
 }
 
-/* Estilos del body */
+
+
+/*~ ESTILOS BODY */
 body {
   background-color: var(--color-black);
   display: flex;
@@ -68,15 +66,19 @@ body {
 }
 .global_box {
   position: relative;
-  background-color: var(--color-opaque_light);
+  background-color: var(--color-brand_4);
   display: flex;
-  flex-direction: row;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
   transition: all 200ms ease;
   /* overflow-y: scroll; */
   /* overflow: overlay; */
 }
+
+
+
+/*~ ESTILOS HEADER */
 header {
   z-index: 1;
   position: fixed;
@@ -86,22 +88,311 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 52px;
+  box-shadow: var(--box_shadow-hard);
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header div div {
+  display: flex;
+  justify-content: center;
+  width: 72px;
+  height: 100%;
+}
+header div a {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+}
+header div a svg {
+  fill: var(--color-brand_2);
+  width: 36px;
+  height: 36px;
+}
+header div a span {
+  color: var(--color-brand_2);
+  margin-left: 6px;
+  font-size: var(--fz-medium);
+  font-weight: 900;
+}
+header div div i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+header div div i:hover {
+  background-color: var(--color-hover-black);
+}
+header div div i:active {
+  background-color: var(--color-active-black);
+}
+header div div i svg {
+  fill: var(--color-brand_2);
+  color: var(--color-brand_2);
+  width: 24px;
+  height: 24px;
+}
+
+
+
+/*~ ESTILOS NAV */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 72px;
+  margin: 20px 0;
+  padding-top: 24px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: var(--box_shadow-soft);
+  transition: all 100ms ease;
+  overflow: hidden;
+}
+/* Menu y footer*/
+nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: fit-content;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav ul.footer li.social {
+  flex-direction: column;
+}
+nav ul.footer li.legal {
+  position: relative;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 24px;
+}
+nav ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
   height: 48px;
-  padding: 0 24px 0 16px;
+  padding-left: 24px;
+  transition: all 200ms ease;
+}
+nav ul.footer li i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-brand_4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 100%;
+}
+nav ul.footer li.legal a {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+}
+nav ul li a:hover {
+  background-color: var(--color-hover-black);
+}
+nav ul.footer li.legal > a:hover {
+  background-color: unset;
+  color: var(--color-brand_2);
+  text-decoration: underline;
+}
+nav ul li a:active {
+  background-color: var(--color-active-brand_1);
+}
+nav ul.footer li.social a.fb:active {
+  background-color: var(--color-active-facebook);
+}
+nav ul.footer li.social a.ig:active {
+  background-color: var(--color-active-instagram);
+}
+nav ul li a svg {
+  fill: var(--color-brand_2);
+  width: 24px;
+  height: 24px;
+}
+nav ul li a span {
+  color: var(--color-brand_2);
+  margin: 2px 0 0 24px;
+  font-size: var(--fz-x_small);
+  font-weight: 700;
+}
+nav ul.footer li.legal i a {
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+nav ul li.legal i a:active {
+  background-color: var(--color-active-black);
+}
+nav ul.footer li.legal span {
+  color: var(--color-brand_2);
+  margin: 0;
+  font-size: var(--fz-xxx_small);
+  font-weight: 400;
+}
+
+
+
+/*~ ESTILOS MAIN */
+main {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  padding: 20px;
+  transition: all 100ms ease;
+  overflow: hidden;
+}
+main div.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: var(--box_shadow-soft);
+  transition: all 100ms ease;
+}
+main div.content--move {
+  width: calc(100% - 300px);
+}
+main div.basket {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 300px;
+  height: calc(100% - 40px);
+  border-radius: 8px 0 0 8px;
+  /* box-shadow: var(--box_shadow-soft); */
+  transition: all 100ms ease;
+}
+main div.basket--move {
+  transform: translateX(0%);
+}
+main div.basket section {
+  /* background-color: var(--color-brand_4); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  padding-left: 24px;
+  /* border-bottom: 1px solid var(--color-active-brand_2); */
+  border-radius: 8px 0 0 8px;
   box-shadow: var(--box_shadow-soft);
 }
-header > div {
-  background-color: green;
+main div.basket > div {
+  /* background-color: greenyellow; */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 24px;
 }
-header > div a {
-  background-color: green;
+main div.basket section h2 {
+  color: var(--color-brand_2);
+  font-size: var(--fz-x_small);
+  font-weight: 700;
 }
-header > div a svg {
-  width: 80px;
-  height: 40px;
-  background-color: yellow;
-  fill: red;
+main div.basket section i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 100%;
 }
-header > div a svg:hover {
-  fill: blue;
+main div.basket section i a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+main div.basket section i a:hover {
+  background-color: var(--color-hover-black);
+}
+main div.basket section i a:active {
+  background-color: var(--color-active-black);
+}
+main div.basket section i a svg {
+  fill: var(--color-brand_2);
+  width: 20px;
+  height: 20px;
+}
+main div.basket section.details {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  padding: 0;
+  overflow: hidden;
+}
+main div.basket section.details a.action {
+  color: var(--color-brand_2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  padding: 0 12px 0 24px;
+  transition: all 200ms ease;
+}
+main div.basket section.details a.action:hover {
+  background-color: var(--color-brand_2);
+  color: var(--color-brand_4);
+}
+main div.basket section.details a.action:hover span {
+  background-color: var(--color-brand_5);
+  color: var(--color-brand_2);
+}
+main div.basket section.details a.action:active {
+  background-color: var(--color-active-black);
+}
+main div.basket section.details a.action span {
+  background-color: var(--color-brand_2);
+  color: var(--color-brand_4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 24px;
+  border-radius: 4px;
+  font-size: var(--fz-xx_small);
+  font-weight: 700;
+  transition: all 100ms ease;
+}
+main div.basket section.details a.action h3 {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: var(--fz-x_small);
+  font-weight: 700;
+}
+main div.basket section.details div.amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 36px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--color-active-brand_2);
+  font-size: var(--fz-xx_small);
+  font-weight: 700;
 }
