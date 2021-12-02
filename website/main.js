@@ -22,13 +22,6 @@ btn_legal_info.addEventListener('click', abrirMenu);
 const btn_basket = document.getElementById('btn_basketJS');
 const content = document.getElementById('contentJS');
 const basket = document.getElementById('basketJS');
-// const btn_dropdown_cart = document.getElementById('btn_dropdown_cartJS');
-// const btn_dropdown_offers = document.getElementById('btn_dropdown_offersJS');
-// const offers_tag = document.getElementById('offers_tagJS');
-// const cart_tag = document.getElementById('cart_tagJS');
-// const offers_content = document.getElementById('offers_contentJS');
-// const cart_content = document.getElementById('cart_contentJS');
-// const btn_offers_svg = document.getElementById('btn_offers_svgJS');
 let basket_on = false;
 function abrirCanasta() {
   if (basket_on == false) {
@@ -42,4 +35,3 @@ function abrirCanasta() {
   }
 }
 btn_basket.addEventListener('click', abrirCanasta);
-// btn_dropdown_offers.addEventListener('click', abrirOfertasSinoCarrito)
