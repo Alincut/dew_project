@@ -8,7 +8,7 @@
   --color-brand_3: #f03043;
   --color-brand_4: #f3f3f3;
   --color-brand_5: #d8d8d8;
-  --color-brand_6: #3c3d3f;
+  --color-brand_6: #4b4c4d;
 
   /* Colores hover */
   --color-hover-black: rgba(0, 0, 0, 0.12);
@@ -256,10 +256,77 @@ main {
   transition: all 100ms ease;
   overflow: hidden;
 }
+main div.content div.box_products {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  visibility: hidden;
+  overflow-y: scroll;
+}
+main div.content div.box_products div {
+  display: grid;
+  flex-grow: 1;
+  grid-template: repeat(6, auto) / 1fr;
+  min-width: 180px;
+  height: fit-content;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: var(--box_shadow-soft);
+}
+main div.content div.box_products div img {
+  grid-area: 1/1/2/2;
+  background-color: silver;
+  justify-self: center;
+  display: flex;
+  margin-bottom: 18px;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+}
+main div.content div.box_products div span {
+  color: var(--color-brand_2);
+  margin-bottom: 4px;
+  font-size: var(--fz-xx_small);
+  font-weight: 700;
+}
+main div.content div.box_products div a {
+  background-color: var(--color-brand_2);
+  color: var(--color-brand_4);
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: var(--fz-x_small);
+  font-weight: 700;
+}
+main div.content div.box_products div span.brand {
+  color: var(--color-brand_6);
+}
+main div.content div.box_products div span.quantity {
+  color: var(--color-brand_6);
+}
+main div.content div.box_products div span.price {
+  margin: 12px 0 20px;
+  font-size: var(--fz-x_small);
+}
+
+
+
+
+
+
+
+
 main div.content {
+  position: relative;
+  background-color: var(--color-brand_4);
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   gap: 20px;
   width: 100%;
   height: 100%;
@@ -269,6 +336,7 @@ main div.content--move {
   width: calc(100% - 360px);
 }
 main div.content figure {
+  z-index: 1;
   position: relative;
   width: 100%;
   height: 50%;
@@ -284,6 +352,7 @@ main div.content figure img {
   width: 100%;
 }
 main div.content > h2 {
+  z-index: 1;
   color: var(--color-brand_2);
   display: flex;
   align-items: center;
@@ -292,6 +361,7 @@ main div.content > h2 {
   font-weight: 700;
 }
 main div.content div.local {
+  z-index: 1;
   flex-grow: 1;
   display: grid;
   grid-template: 1fr 1fr / repeat(3, 1fr);
@@ -476,7 +546,7 @@ main div.basket div.basket_content ul.basket_items li {
   position: relative;
   background-color: var(--color-brand_4);
   width: 100%;
-  height: 120px;
+  height: 140px;
   padding: 12px;
   border-radius: 8px;
   box-shadow: var(--box_shadow-soft);
@@ -488,8 +558,9 @@ main div.basket div.basket_content ul.basket_items li span {
   font-weight: 700;
 }
 main div.basket div.basket_content ul.basket_items li img.photo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
 }
 main div.basket div.basket_content ul.basket_items li span.sum {
   position: absolute;
@@ -557,7 +628,7 @@ main div.basket div.basket_content ul.basket_items li span.quantity {
 main div.basket div.basket_content ul.basket_items li span.name {
   position: absolute;
   top: 12px;
-  left: 84px;
+  left: 104px;
   width: 180px;
   height: 20px;
   font-size: var(--fz-xx_small);
@@ -565,7 +636,7 @@ main div.basket div.basket_content ul.basket_items li span.name {
 main div.basket div.basket_content ul.basket_items li span.spec {
   position: absolute;
   top: 32px;
-  left: 84px;
+  left: 104px;
   color: var(--color-brand_6);
   width: 180px;
   height: 20px;
@@ -573,7 +644,7 @@ main div.basket div.basket_content ul.basket_items li span.spec {
 main div.basket div.basket_content ul.basket_items li span.small_price {
   position: absolute;
   top: 52px;
-  left: 84px;
+  left: 104px;
   color: var(--color-brand_6);
   width: 180px;
   height: 20px;
@@ -587,4 +658,7 @@ main div.basket div.basket_content ul.basket_items li span.price {
   width: 100px;
   height: 20px;
   font-size: var(--fz-x_small);
+}
+.sum{
+
 }
